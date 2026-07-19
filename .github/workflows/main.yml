@@ -31,8 +31,8 @@ jobs:
 
     - name: Checkout history branch
       run: |
-        git config --global user.name "jstrieb/github-stats"
-        git config --global user.email "github-stats[bot]@jstrieb.github.io"
+        git config --global user.name "killshot13/github-stats"
+        git config --global user.email "github-stats[bot]@killshot13.github.io"
         # Push generated files to the generated branch
         git pull
         git checkout generated || git checkout -b generated
@@ -48,7 +48,7 @@ jobs:
         SILENT: "true"
         # TODO: Remove this when they get their API working again
         # https://github.com/orgs/community/discussions/192970
-        MAX_RETRIES: 5
+        MAX_RETRIES: 1
 
     - name: Commit to the repo
       run: |
